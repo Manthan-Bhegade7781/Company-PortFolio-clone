@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect, useRef } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 
 const Navbar = () => {
@@ -23,8 +24,26 @@ const Navbar = () => {
     },
     ];
 
+    const navRef = useRef(null);
+
+    useEffect(() => {
+    function handleClickOutside(event) {
+        if (
+        navRef.current &&
+        !navRef.current.contains(event.target)
+        ) {
+        setMenuOpen(false);
+        }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () =>
+        document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
   return (
-    <nav className="sticky top-0 z-50 bg-black border-b border-gray-800">
+    <nav ref={navRef} className="sticky top-0 z-50 bg-black border-b border-gray-800 relative">
       <div className="max-w-7xl mx-auto px-5 lg:px-9">
         <div className="h-20 flex items-center justify-between">
 
@@ -44,7 +63,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-10">
+          <ul className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
                 <li key={link.name}>
                 <a
@@ -72,23 +91,51 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        {menuOpen && (
-          <div className="md:hidden pb-6">
-            <ul className="flex flex-col gap-6">
+{menuOpen && (
+  <div
+    className="
+      absolute
+      left-0
+      top-full
+      w-full
+      bg-black
+      border-t
+      border-gray-800
+      shadow-2xl
+      lg:hidden
+      animate-in
+      slide-in-from-top-2
+      duration-300
+    "
+  >
+    <div className="px-5 py-6">
+
+        <ul className="flex flex-col gap-6">
+
             {navLinks.map((link) => (
-                <li key={link.name}>
+            <li key={link.name}>
                 <a
-                    href={link.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="text-gray-300 hover:text-white"
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="block text-gray-300 hover:text-white transition"
                 >
-                    {link.name}
+                {link.name}
                 </a>
-                </li>
+            </li>
             ))}
-            </ul>
-          </div>
-        )}
+
+        </ul>
+
+        <button
+            onClick={() => setMenuOpen(false)}
+            className="mt-8 w-full rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 py-3 font-semibold text-white"
+        >
+            Go Premium
+        </button>
+
+        </div>
+    </div>
+    )}
       </div>
     </nav>
   );

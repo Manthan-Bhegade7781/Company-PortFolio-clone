@@ -82,7 +82,7 @@ const Hero = () => {
 
             {/* Stats */}
 
-            <div className="mt-16 flex flex-col lg:flex-row lg:gap-21 gap-4">
+            <div className="mt-16 flex flex-row lg:flex-row lg:gap-21 gap-10 items-center justify-center">
 
               <div>
                 <h3 className="text-4xl font-bold">500+</h3>
