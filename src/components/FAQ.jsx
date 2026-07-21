@@ -12,7 +12,7 @@ const FAQ = () => {
   return (
     <section
       id="faq"
-      className="relative overflow-hidden bg-black py-28"
+      className="relative overflow-hidden bg-black py-25 border-t border-white/6"
     >
       <div className="mx-auto max-w-7xl px-6">
 
@@ -20,7 +20,7 @@ const FAQ = () => {
 
         <div className="text-center">
 
-          <h2 className="text-5xl lg:text-6xl font-extrabold text-white">
+          <h2 className="text-5xl lg:text-6xl font-bold text-white">
             Frequently Asked Questions
           </h2>
 
@@ -66,7 +66,7 @@ const FAQ = () => {
                   "
                 >
 
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="text-xl font-bold text-white">
                     {item.question}
                   </h3>
 

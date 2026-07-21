@@ -2,7 +2,7 @@ import whyPortfolioData from "../data/whyPortfolioData";
 
 const WhyPortfolio = () => {
   return (
-    <section className="relative bg-black py-5 overflow-hidden">
+    <section className="relative bg-black py-15 overflow-hidden border-t border-white/6">
 
       {/* Background Glow */}
       <div className="absolute left-0 top-32 h-72 w-72 rounded-full bg-blue-600/10 blur-[140px]" />
@@ -14,7 +14,7 @@ const WhyPortfolio = () => {
 
         <div className="text-center">
 
-          <h2 className="text-5xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
+          <h2 className="text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
 
             Why You Need a Portfolio Website
 
@@ -52,7 +52,7 @@ const WhyPortfolio = () => {
                 transition-all
                 duration-300
                 hover:-translate-y-2
-                p-5
+                p-3
                 "
               >
 

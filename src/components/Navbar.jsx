@@ -43,21 +43,21 @@ const Navbar = () => {
     }, []);
 
   return (
-    <nav ref={navRef} className="sticky top-0 z-50 bg-black border-b border-gray-800 relative">
-      <div className="max-w-7xl mx-auto px-5 lg:px-9">
+    <nav ref={navRef} className="sticky top-0 z-50 bg-black border-b border-gray-900 relative">
+      <div className="max-w-7xl mx-auto px-5 lg:px-4">
         <div className="h-20 flex items-center justify-between">
 
           {/* Logo */}
           <div>
-            <h1 className="text-2xl lg:text-3xl font-extrabold tracking-tight">
+            <h1 className="text-lg lg:text-3xl font-bold tracking-tight">
               <span className="text-white">Centennial</span>
 
-              <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent">
                 Portfolio
               </span>
             </h1>
 
-            <p className="text-[10px] lg:text-xs uppercase tracking-[3px] text-gray-500 font-medium">
+            <p className="hidden lg:flex text-[10px] lg:text-xs uppercase tracking-[3px] text-gray-500 font-medium">
               Build Your Digital Identity
             </p>
           </div>
@@ -68,26 +68,31 @@ const Navbar = () => {
                 <li key={link.name}>
                 <a
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition duration-300"
+                    className="group relative inline-block text-sm font-medium text-gray-300 transition-colors duration-300 hover:text-white"
                 >
                     {link.name}
+
+                    <span className="absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 bg-gradient-to-r from-purple-500 to-pink-500 transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
                 </a>
                 </li>
             ))}
             </ul>
 
-          {/* Desktop Button */}
-          <button className="hidden lg:block px-3 py-2 rounded-full font-semibold text-white bg-gradient-to-r from-yellow-400 to-orange-500 hover:scale-105 transition text-sm">
-            Go Premium
-          </button>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden text-white text-3xl"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? <HiX /> : <HiMenu />}
-          </button>
+            <div className="p-2 flex flex-row gap-2 ">
+                {/* Desktop Button */}
+                <button className="lg:px-7 lg:py-3 px-2 py-1 rounded-full text-sm lg:font-medium text-white bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-700 hover:scale-105 transition lg:text-sm">
+                    Go Premium
+                </button>
+
+                        {/* Mobile Menu Button */}
+                <button
+                    className="lg:hidden text-white text-2xl"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
+                    {menuOpen ? <HiX /> : <HiMenu />}
+                </button>
+            </div>
         </div>
 
         {/* Mobile Menu */}
@@ -95,7 +100,6 @@ const Navbar = () => {
   <div
     className="
       absolute
-      left-0
       top-full
       w-full
       bg-black
@@ -125,13 +129,6 @@ const Navbar = () => {
             ))}
 
         </ul>
-
-        <button
-            onClick={() => setMenuOpen(false)}
-            className="mt-8 w-full rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 py-3 font-semibold text-white"
-        >
-            Go Premium
-        </button>
 
         </div>
     </div>

@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="relative overflow-hidden bg-black py-10">
+    <section id="pricing" className="relative overflow-hidden bg-black py-25 border-t border-white/6">
 
       {/* Background Glow */}
       <div className="absolute left-0 top-20 h-80 w-80 rounded-full bg-blue-600/10 blur-[150px]" />
@@ -15,7 +15,7 @@ const Pricing = () => {
 
         <div className="text-center">
 
-          <h2 className="text-4xl  lg:text-6xl font-extrabold">
+          <h2 className="text-4xl  lg:text-6xl font-bold">
             Simple Pricing
           </h2>
 
@@ -84,7 +84,7 @@ const Pricing = () => {
                 className={`mt-14 w-full rounded-2xl py-4 text-lg font-semibold transition
                   ${
                     plan.popular
-                      ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+                      ? "bg-gradient-to-r from-blue-500 to-pink-600 text-white"
                       : "bg-white text-black hover:bg-gray-100"
                   }`}
               >

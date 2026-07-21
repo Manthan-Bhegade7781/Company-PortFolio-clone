@@ -2,7 +2,7 @@ import featuresData from "../data/featuresData";
 
 const Features = () => {
   return (
-    <section id="features" className="relative bg-black py-15 overflow-hidden">
+    <section id="features" className="relative bg-black py-25 overflow-hidden border-t border-white/6">
 
       {/* Background Glow */}
       <div className="absolute left-0 top-40 h-80 w-80 rounded-full bg-blue-600/10 blur-[150px]" />
@@ -14,7 +14,7 @@ const Features = () => {
 
         <div className="text-center">
 
-          <h2 className="text-5xl lg:text-6xl font-extrabold text-white">
+          <h2 className="text-5xl lg:text-6xl font-bold text-white">
             Powerful Features
           </h2>
 
