@@ -81,8 +81,13 @@ const Navbar = () => {
 
             <div className="p-2 flex flex-row gap-2 ">
                 {/* Desktop Button */}
-                <button className="lg:px-7 lg:py-3 px-2 py-1 rounded-full text-sm lg:font-medium text-white bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-700 hover:scale-105 transition lg:text-sm">
-                    Go Premium
+                <button
+                className="rounded-full bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-700
+                px-3 py-1.5 text-xs font-medium text-white transition hover:scale-105
+                sm:px-4 sm:py-2 sm:text-sm
+                lg:px-7 lg:py-3 lg:text-sm"
+                >
+                Go Premium
                 </button>
 
                         {/* Mobile Menu Button */}
