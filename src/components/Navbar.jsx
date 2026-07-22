@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <nav ref={navRef} className="sticky top-0 z-50 bg-black border-b border-gray-900 relative">
-      <div className="max-w-7xl mx-auto px-5 lg:px-4">
+      <div className="max-w-7xl mx-auto px-5 lg:px-15">
         <div className="h-20 flex items-center justify-between">
 
           {/* Logo */}
@@ -52,7 +52,7 @@ const Navbar = () => {
             <h1 className="text-lg lg:text-3xl font-bold tracking-tight">
               <span className="text-white">Centennial</span>
 
-              <span className="bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Portfolio
               </span>
             </h1>
@@ -68,11 +68,9 @@ const Navbar = () => {
                 <li key={link.name}>
                 <a
                     href={link.href}
-                    className="group relative inline-block text-sm font-medium text-gray-300 transition-colors duration-300 hover:text-white"
+                    className="group relative inline-block text-lg font-normal text-gray-300 transition-colors duration-300 hover:text-white"
                 >
                     {link.name}
-
-                    <span className="absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 bg-gradient-to-r from-purple-500 to-pink-500 transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
                 </a>
                 </li>
             ))}
@@ -82,10 +80,10 @@ const Navbar = () => {
             <div className="p-2 flex flex-row gap-2 ">
                 {/* Desktop Button */}
                 <button
-                className="rounded-full bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-700
-                px-3 py-1.5 text-xs font-medium text-white transition hover:scale-105
+                className="rounded-lg bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-700
+                px-1 py-3 text-xs font-medium text-white transition hover:scale-105
                 sm:px-4 sm:py-2 sm:text-sm
-                lg:px-7 lg:py-3 lg:text-sm"
+                lg:px-4 lg:py-4 lg:text-sm"
                 >
                 Go Premium
                 </button>
