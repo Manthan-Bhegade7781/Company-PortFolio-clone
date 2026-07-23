@@ -1,4 +1,5 @@
 import { Zap, ShieldCheck, Gift, Globe, Headphones, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const features = [
   "⚡ No Hidden Charges",
@@ -73,19 +74,25 @@ export default function Hero() {
           {/* CTAs */}
             <div className="relative z-10 mt-12 flex flex-col lg:flex-row gap-4">
 
+       <Link to="/register">
               <button className="w-full lg:w-auto rounded-xl bg-gradient-to-r from-blue-600 to-purple-500 px-8 py-4 lg:px-13 lg:py-5 font-medium text-sm transition hover:scale-105">
                 Create My <br/>
                 Portfolio
               </button>
+       </Link>
 
-              <button className="w-full lg:w-auto bg-zinc-800 rounded-xl border border-zinc-700 px-8 py-4 lg:px-10 lg:py-7 font-medium text-sm hover:bg-black">
+       <Link to="/login">
+              <button  className="w-full lg:w-auto bg-zinc-800 rounded-xl border border-zinc-700 px-8 py-4 lg:px-10 lg:py-7 font-medium text-sm hover:bg-black">
                 Login
               </button>
+       </Link>
 
-              <button className="w-full lg:w-auto bg-zinc-800 rounded-xl border border-zinc-700 px-8 py-4 lg:px-10 lg:py-4 font-medium text-sm hover:bg-black">
+       <Link to="/demo">
+       <button className="w-full lg:w-auto bg-zinc-800 rounded-xl border border-zinc-700 px-8 py-4 lg:px-10 lg:py-4 font-medium text-sm hover:bg-black">
                 View <br/>
                 Demo
               </button>
+       </Link>
 
             </div>
 

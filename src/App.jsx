@@ -1,13 +1,23 @@
-import Home from "./pages/Home"
-import BackToTop from "./components/BackToTop";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const App = () => {
+import Home from "./pages/Home";
+import BackToTop from "./components/BackToTop";
+import Login from "./pages/Login";
+import Register from "./pages/Register"
+import Demo from "./pages/Demo"
+
+function App() {
   return (
-    <>
-      <Home />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/demo" element={<Demo />} />
+      </Routes>
       <BackToTop />
-    </>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
