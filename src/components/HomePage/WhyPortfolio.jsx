@@ -1,4 +1,4 @@
-import whyPortfolioData from "../data/whyPortfolioData";
+import whyPortfolioData from "../../data/whyPortfolioData";
 
 const WhyPortfolio = () => {
   return (

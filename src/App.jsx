@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Demo from "./pages/Demo";
-import BackToTop from "./components/BackToTop";
+import PortfolioDemo from "./pages/PortfolioDemo";
 
 function App() {
   return (
@@ -14,9 +14,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/demo" element={<Demo />} />
+        <Route path="/portfolio-demo" element={<PortfolioDemo />} />
       </Routes>
-
-      <BackToTop />
     </>
   );
 }

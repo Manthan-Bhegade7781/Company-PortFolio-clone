@@ -1,4 +1,4 @@
-import faqData from "../data/faqData";
+import faqData from "../../data/faqData";
 
 const FAQ = () => {
   return (

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Demo = () => {
   const [demoName, setDemoName] = useState("");
@@ -49,7 +50,8 @@ const Demo = () => {
             "
           />
 
-          <button
+          <Link to="/portfolio-demo">
+            <button
             type="submit"
             className="
               mt-6
@@ -67,6 +69,7 @@ const Demo = () => {
           >
             Start Demo
           </button>
+          </Link>
 
         </form>
 

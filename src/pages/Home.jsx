@@ -1,9 +1,9 @@
-import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import WhyPortfolio from "../components/WhyPortfolio";
-import Features from "../components/Features";
-import Pricing from "../components/Pricing";
-import FAQ from "../components/FAQ";
+import Navbar from "../components/HomePage/Navbar";
+import Hero from "../components/HomePage/Hero";
+import WhyPortfolio from "../components/HomePage/WhyPortfolio";
+import Features from "../components/HomePage/Features";
+import Pricing from "../components/HomePage/Pricing";
+import FAQ from "../components/HomePage/FAQ";
 
 export default function Home() {
   return (
@@ -14,6 +14,7 @@ export default function Home() {
       <Features />
       <Pricing />
       <FAQ />
+      <BackToTop />
     </div>
   );
 }
