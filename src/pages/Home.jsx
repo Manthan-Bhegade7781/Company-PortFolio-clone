@@ -4,6 +4,8 @@ import WhyPortfolio from "../components/HomePage/WhyPortfolio";
 import Features from "../components/HomePage/Features";
 import Pricing from "../components/HomePage/Pricing";
 import FAQ from "../components/HomePage/FAQ";
+import BackToTop from "../components/BackToTop"
+
 
 export default function Home() {
   return (
