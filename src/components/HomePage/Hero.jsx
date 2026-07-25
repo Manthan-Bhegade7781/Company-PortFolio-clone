@@ -60,7 +60,7 @@ export default function Hero() {
           </p>
 
           {/* Perk pills */}
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div id="start" className="mt-8 flex flex-wrap gap-3">
               {features.map((item) => (
                 <div
                   key={item}

@@ -8,7 +8,7 @@ const Navbar = () => {
   const navLinks = [
     {
         name: "Get Started",
-        href: "#home",
+        href: "#start",
     },
     {
         name: "Features",
@@ -45,7 +45,7 @@ const Navbar = () => {
   return (
     <nav ref={navRef} className="sticky top-0 z-50 bg-black border-b border-gray-900 relative">
       <div className="max-w-7xl mx-auto px-5 lg:px-15">
-        <div className="h-20 flex items-center justify-between">
+        <div className="h-15 lg:h-20 flex items-center justify-between">
 
           {/* Logo */}
           <div>
@@ -81,7 +81,7 @@ const Navbar = () => {
                 {/* Desktop Button */}
                 <button
                 className="rounded-lg bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-700
-                px-1 py-3 text-xs font-medium text-white transition hover:scale-105
+                px-1 py-2 lg:py-3 text-xs font-medium text-white transition hover:scale-105
                 sm:px-4 sm:py-2 sm:text-sm
                 lg:px-4 lg:py-4 lg:text-sm"
                 >
