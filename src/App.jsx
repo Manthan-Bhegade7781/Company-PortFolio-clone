@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Demo from "./pages/Demo";
 import PortfolioDemo from "./pages/PortfolioDemo";
+import Support from "./pages/Support";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/demo" element={<Demo />} />
         <Route path="/portfolio-demo" element={<PortfolioDemo />} />
+        <Route path="/support" element={<Support />} />
       </Routes>
     </>
   );
