@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import Demo from "./pages/Demo";
 import PortfolioDemo from "./pages/PortfolioDemo";
 import Support from "./pages/Support";
+import PricingPage from "./pages/PricingPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/demo" element={<Demo />} />
         <Route path="/portfolio-demo" element={<PortfolioDemo />} />
         <Route path="/support" element={<Support />} />
+        <Route path="/pricing" element={<PricingPage />} />
       </Routes>
     </>
   );

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useEffect, useRef } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -79,14 +80,15 @@ const Navbar = () => {
 
             <div className="p-2 flex flex-row gap-2 ">
                 {/* Desktop Button */}
-                <button
+                <Link
+                to={"/pricing"}
                 className="rounded-lg bg-gradient-to-r from-yellow-400 via-orange-400 to-orange-700
                 px-1 py-2 lg:py-3 text-xs font-medium text-white transition hover:scale-105
                 sm:px-4 sm:py-2 sm:text-sm
                 lg:px-4 lg:py-4 lg:text-sm"
                 >
                 Go Premium
-                </button>
+                </Link>
 
                         {/* Mobile Menu Button */}
                 <button
